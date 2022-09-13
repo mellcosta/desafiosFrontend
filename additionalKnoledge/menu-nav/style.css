@@ -1,0 +1,90 @@
+body{
+    background:#223 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation{
+    position: relative;
+    top: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+}
+ .menu{
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    transition: 0.5s; 
+}
+
+.navigation input:checked ~ .menu{
+    width: 400px;
+}
+.menu li{
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+    padding: 5px;
+}
+.menu a:hover{
+    color: #111;
+}
+
+.navigation input{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navigation span{
+    position: absolute;
+    left: 26px;
+    width: 32px;
+    height: 4px;
+    background: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.navigation input:checked ~ span{
+    background-color: #111;
+}
+.navigation span:nth-child(2)
+{
+    transform: translateY(-8px);
+}
+.navigation input:checked ~ span:nth-child(2),
+input:checked ~ span:nth-child(4){
+    transform: translateY(0) rotate(45deg);
+}
+.navigation span:nth-child(3){
+    transform: translateY(8px);
+}
+.navigation input:checked ~ span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+
+@media screen and (max-width:500px){
+    .navigation input:checked ~ .menu{
+        width: 100px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #212121;
+}
+
+main{
+    position:relative;
+    width: 40%;
+    height: 25vh;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #eaeaea;
+    padding: 32px;
+    background-color: #313233;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-shadow: 1px 2px 2px #baac80;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+form{
+    display: flex;
+    gap: 2px;
+    width: 70%;
+    height: 40px;
+    box-shadow:1px 0.5px 1px #eaeaea;
+    border-radius: 2px;
+}
+
+#password{
+    height: 100%;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px;
+    background: linear-gradient(#2a2a2a, #313233, #2a2a2a);
+    color: #eaeaea;
+    border: 2px solid #212121;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+
+#togglePassword{
+    width: 20%;
+    background: linear-gradient(#2a2a2a, #313233, #2a2a2a);
+    border: 2px solid #212121;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#togglePassword:hover{
+    border: 3px solid #444;
+}
+
+#reset{
+    position: absolute;
+    top: 20vh;
+    left: 20vh;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    background-color:  #313233;
+    color: #baac80;
+    font-size: 15px;
+    cursor: pointer;
+}
+#reset:hover{
+    background-color:#444 ;
+}
+
+@media screen and (max-width:600px) {
+    main{
+        width: 90%;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    form{
+        height: 30px;
+    }
+
+    #reset{
+        left: 50%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    main{
+        width: 70%;
+    }
+
+    #reset{
+        left: 40%;
+    }
+}
+@media screen and (min-width:1000px) {
+
+    #reset{
+        left: 40%;
+    }
+}

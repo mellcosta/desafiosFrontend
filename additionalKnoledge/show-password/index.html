@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <main>
+        <h1>New Password</h1>
+       <form>
+        <input type="password" id="password" autocomplete="current-password" required>
+        <button  type="button" id="togglePassword"><img src="./assets/img/open-eye.svg" id="eye"></button>
+        <button type="reset" id="reset">Reset</button>
+       </form> 
+    </main>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password_input = document.querySelector('#password');
+        const eye = document.querySelector('#eye');
+
+        togglePassword.addEventListener('click', (e) => {
+            const type = password_input.getAttribute('type');
+            const mostra = type === 'password' ? 'text' : 'password';
+            password_input.setAttribute('type', mostra);
+
+            if(type === 'password'){
+                eye.setAttribute("src", "./assets/img/closed-eye.svg" )
+            }
+            else{
+                eye.setAttribute("src", "./assets/img/open-eye.svg" )
+            }
+        })
+    </script>
+</body>
+</html>
